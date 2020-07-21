@@ -1,0 +1,10 @@
+<div class="card-columns mt-5">
+    <div (click)="seeArtist(item)" class="card puntero" *ngFor="let item of items">
+        <img [src]="item.images | noimage" class="card-img-top" alt="item.name">
+        <div class="card-body">
+          <h5 class="card-title">{{item.name}}</h5>
+          <span *ngFor="let artist of item.artists" class="badge badge-pill badge-secondary" >{{artist.name}}</span>
+          <p class="card-text mt-2"><small class="text-muted">{{item.release_date}}</small></p>
+        </div>
+    </div>
+</div>
